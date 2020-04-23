@@ -1,0 +1,44 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+div {
+    font-family: Tahoma;
+    font-size: 40px;
+    text-align: center;
+    
+    border-top: 1px solid #687291;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.A,
+.C,
+.E {
+    background-color: #dfe1e7;
+}
+
+.B,
+.D {
+    background-color: #eeeff2;
+}
+
+.F {
+    background-color: #687291;
+    border: 4px solid black;
+    line-height: 100px;
+}
