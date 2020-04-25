@@ -1,0 +1,49 @@
+body {
+    color: rgb(39, 38, 38);
+}
+
+
+.normal,
+.selected {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.leftButton,
+.rightButton {
+    color: rgb(255, 144, 144);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header {
+    display:inline-block;
+    width: 250px;
+    text-align: center;
+}
+
+.dim {
+    opacity: 40%;
+}
+
+.selected {
+    background-color: rgb(66, 252, 190);
+}
+
+table {
+    padding: 10px;
+    min-width: 300px;
+}
+
+table, th {
+    border: 2px solid rgb(148, 147, 147);
+}
+
+td {
+    border: 2px solid rgb(3, 217, 255);
+    text-align: center;
+}
+
+span {
+    font-size: 28pt;
+}
