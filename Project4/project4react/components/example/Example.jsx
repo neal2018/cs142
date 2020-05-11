@@ -164,7 +164,7 @@ class Example extends React.Component {
         <pre className="cs142-example-code">
           <code className="language-jsx">
             {
-`<p>My name is "{this.state.name}".</p>`
+              `<p>My name is "{this.state.name}".</p>`
             }
           </code>
         </pre>
@@ -206,7 +206,7 @@ class Example extends React.Component {
         <pre className="cs142-example-code">
           <code className="language-jsx">
             {
-`function outOfBandJSX(option) {
+              `function outOfBandJSX(option) {
   var optionJSX;
   if (option) {
     optionJSX = <div>Option was True</div>;
@@ -231,28 +231,28 @@ class Example extends React.Component {
           </code>
         </pre>
         <p>
-            Calling this function from a template
+          Calling this function from a template
             (i.e. <code>{'{this.outOfBandJSX(true)}'}</code>)
             would be expand to:
         </p>
         <div className="cs142-example-output">{this.outOfBandJSX(true)}</div>
         <p>
-            Another way of accomplishing this is embedding the operations inside
-            of curly braces. Although arbitrary JavaScript can appear inside
-            braces, it must return a string or JSX expression to work.
-            JavaScript control flow operations such as if, for, and while do
-            not return values so templates
+          Another way of accomplishing this is embedding the operations inside
+          of curly braces. Although arbitrary JavaScript can appear inside
+          braces, it must return a string or JSX expression to work.
+          JavaScript control flow operations such as if, for, and while do
+          not return values so templates
             like <code>{'{if (bool) ... else ...}'}</code> do not work.
         </p>
         <p>
-            The following code generates the above output using the
+          The following code generates the above output using the
             JavaScript {'"?:"'} operator and functional-style programming
             support to always return a value in the template:
         </p>
         <pre className="cs142-example-code">
           <code className="language-jsx">
             {
-`<div>
+              `<div>
   option ? <div>Option was True</div> : <div>Option was False</div> }
   <ul>
     {[0,1,2].map((i) =>  <li key={i}>List Item {i}</li>)}
@@ -270,7 +270,7 @@ class Example extends React.Component {
         <pre className="cs142-example-code">
           <code className="language-jsx">
             {
-`<div>
+              `<div>
   <p>A paragraph will appear between this paragraph</p>
   {
     this.state.inputValue && (
@@ -313,7 +313,7 @@ class Example extends React.Component {
         <pre className="cs142-example-code">
           <code className="language-jsx">
             {
-`<label htmlFor="inId">Input Field: </label>
+              `<label htmlFor="inId">Input Field: </label>
 <input type="text" value={this.state.inputValue} onChange={this.handleChangeBound} />`
             }
           </code>
@@ -334,8 +334,8 @@ class Example extends React.Component {
         </p>
 
         {
-        /* eslint-disable jsx-a11y/label-has-associated-control */
-        /* eslint-disable jsx-a11y/label-has-for */
+          /* eslint-disable jsx-a11y/label-has-associated-control */
+          /* eslint-disable jsx-a11y/label-has-for */
         }
         <div className="cs142-example-output">
           <label htmlFor="inId">Input Field:
@@ -358,7 +358,7 @@ class Example extends React.Component {
         <pre className="cs142-example-code">
           <code className="language-jsx">
             {
-`<div className="cs142-example-output">
+              `<div className="cs142-example-output">
   <p>Test button clicks.
     {
       this.state.buttonWasClicked &&
