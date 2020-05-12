@@ -32,3 +32,32 @@ you use won't conflict with these names.
 .cs142-code-name {
   font-family: Courier New, monospace;
 }
+
+.cs142-display-name,
+.cs142-display-motto {
+  font-style: italic;
+  background-color: antiquewhite;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #722b00;
+}
+
+.motto-update {
+  background-color: beige;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px dashed #722b00;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.cs142-input-motto {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

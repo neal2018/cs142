@@ -23,6 +23,7 @@ class Example extends React.Component {
     // We read the example model data into the state variable 'name'
     this.state = {
       name: window.cs142models.exampleModel().name,
+      motto: window.cs142models.exampleModel().motto,
       counter: 0,
       inputValue: '',
       buttonWasClicked: '',
@@ -36,6 +37,8 @@ class Example extends React.Component {
     // Note: A commmon idiom in React code is to use JavaScript bind() to
     // smash the method to accomplish this passthrough to the method:
     //      this.handleChange = this.handleChange.bind(this);
+
+    this.handleMottoChangeBound = event => this.setState({ motto: event.target.value });
   }
 
   // React components have several "lifecycle functions"
@@ -103,7 +106,13 @@ class Example extends React.Component {
         <h1>CS142 Project#4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
+          <p>My name is: <span className="cs142-display-name">{this.state.name}</span>.</p>
+          <p>My motto is: <span className="cs142-display-motto">{this.state.motto}</span>.</p>
+        </div>
+
+        <div className="cs142-input-motto">
+          Change Motto Here:
+          <input type="text" value={this.state.motto} size="30" onChange={this.handleMottoChangeBound} />
         </div>
 
         <p>

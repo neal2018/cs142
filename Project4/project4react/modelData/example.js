@@ -16,7 +16,8 @@ if (cs142models === undefined) {
 
 cs142models.exampleModel = function() {
    return {
-      name: 'Unknown Name'
+      name: 'Neal',
+      motto: 'Failure is the mother of success'
    };
 };
 
