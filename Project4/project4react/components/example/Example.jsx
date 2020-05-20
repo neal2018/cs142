@@ -105,7 +105,7 @@ class Example extends React.Component {
       <div className="container Example">
         <h1>CS142 Project#4 React.js Example</h1>
 
-        <div className="motto-update">
+        <div className="cs142-motto-update">
           <p>My name is: <span className="cs142-display-name">{this.state.name}</span>.</p>
           <p>My motto is: <span className="cs142-display-motto">{this.state.motto}</span>.</p>
         </div>
