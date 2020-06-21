@@ -16,11 +16,11 @@ var Promise = require("Promise");
 
 
 function fetchModel(url) {
-  return new Promise(function(resolve, reject) {
-      console.log(url);
-      setTimeout(() => reject({status: 501, statusText: "Not Implemented"}),0);
-      // On Success return:
-      // resolve({data: getResponseObject});
+  return new Promise(function (resolve, reject) {
+    console.log(url);
+    setTimeout(() => reject({ status: 501, statusText: "Not Implemented" }), 0);
+    // On Success return:
+    // resolve({data: getResponseObject});
   });
 }
 

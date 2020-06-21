@@ -6,7 +6,7 @@ import {
   ListItemText,
   Typography,
 }
-from '@material-ui/core';
+  from '@material-ui/core';
 import './userList.css';
 
 /**

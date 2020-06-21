@@ -36,9 +36,9 @@ app.get('/test/:p1', function (request, response) {
     response.status(400).send('Not found');
     return;
   }
-  
+
   var info = cs142models.schemaInfo();
-  
+
   // Query didn't return an error but didn't find the SchemaInfo object - This
   // is also an internal error return.
   if (info.length === 0) {
