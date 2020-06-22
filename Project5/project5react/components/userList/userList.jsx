@@ -21,15 +21,19 @@ class UserList extends React.Component {
   }
 
   render() {
-    const listLink = [];
-    for (const user of this.state.data) {
-      listLink.push(<ListItem><Link to={{ pathname: `/users/:${user._id}` }}>{user.first_name} {user.last_name}</Link></ListItem>)
-      listLink.push(<Divider />);
-    }
     return (
       <div>
         <List component="nav">
-          {listLink}
+          {this.state.data.map((user) => (
+            <div key={user._id}>
+              <ListItem>
+                <Link to={`/users/${user._id}`} replace={true}>
+                  <ListItemText primary={`${user.first_name} ${user.last_name}`} />
+                </Link>
+              </ListItem>
+              <Divider />
+            </div>
+          ))}
         </List>
       </div>
     );
