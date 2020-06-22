@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Divider,
   List,
   ListItem,
   ListItemText,
   Typography,
-}
-  from '@material-ui/core';
+} from '@material-ui/core';
 import './userList.css';
 
 /**
@@ -15,33 +15,22 @@ import './userList.css';
 class UserList extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      data: window.cs142models.userListModel()
+    };
   }
 
   render() {
+    const listLink = [];
+    for (const user of this.state.data) {
+      listLink.push(<ListItem><Link to={{ pathname: `/users/:${user._id}` }}>{user.first_name} {user.last_name}</Link></ListItem>)
+      listLink.push(<Divider />);
+    }
     return (
       <div>
-        <Typography variant="body1">
-          This is the user list, which takes up 3/12 of the window.
-          You might choose to use <a href="https://material-ui.com/demos/lists/">Lists</a> and <a href="https://material-ui.com/demos/dividers">Dividers</a> to
-          display your users like so:
-        </Typography>
         <List component="nav">
-          <ListItem>
-            <ListItemText primary="Item #1" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemText primary="Item #2" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemText primary="Item #3" />
-          </ListItem>
-          <Divider />
+          {listLink}
         </List>
-        <Typography variant="body1">
-          The model comes in from window.cs142models.userListModel()
-        </Typography>
       </div>
     );
   }
